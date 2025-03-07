@@ -35,6 +35,13 @@ const Dashboard = () => {
   const { push } = useRouter()
   const pathname = usePathname()
 
+  useEffect(() => {
+    const { userSessionToken } = parseCookies()
+    if (userSessionToken) {
+      window.location.href = `https://academy-crossfi.vercel.app/login?sessiontoken=${userSessionToken}`
+    }
+  }, [])
+
   const openModal = () => {
     setIsCreatingNewWorkspace(true)
   }

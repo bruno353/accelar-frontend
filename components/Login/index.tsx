@@ -86,13 +86,13 @@ const SignUp = () => {
       if (user) {
         setCookie(null, 'userSessionToken', user['sessionToken'], {
           path: '/',
-          maxAge: 30 * 24 * 60 * 60, // Exemplo de validade do cookie: 30 dias
+          maxAge: 180 * 24 * 60 * 60, // Exemplo de validade do cookie: 180 dias
           secure: true, // Recomendado para produção, garante que o cookie seja enviado apenas por HTTPS
           sameSite: 'strict', // Recomendado para evitar ataques de CSRF
         })
         setCookie(null, 'user', JSON.stringify(user), {
           path: '/',
-          maxAge: 30 * 24 * 60 * 60, // Exemplo de validade do cookie: 30 dias
+          maxAge: 180 * 24 * 60 * 60, // Exemplo de validade do cookie: 30 dias
           secure: true, // Recomendado para produção, garante que o cookie seja enviado apenas por HTTPS
           sameSite: 'strict', // Recomendado para evitar ataques de CSRF
         })
