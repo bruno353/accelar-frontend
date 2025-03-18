@@ -38,7 +38,7 @@ const Dashboard = () => {
   useEffect(() => {
     const { userSessionToken } = parseCookies()
     if (userSessionToken) {
-      window.location.href = `https://academy-crossfi.vercel.app/login?sessiontoken=${userSessionToken}`
+      window.location.href = `https://accelar-universe-frontend.vercel.app//login?sessiontoken=${userSessionToken}`
     }
   }, [])
 
